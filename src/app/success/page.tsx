@@ -1,0 +1,2 @@
+import Link from 'next/link'; import { Header } from '@/components/Header'; import { Footer } from '@/components/Footer';
+export default function Success(){return <><Header/><main className="shell py-24 text-center"><p className="eyebrow">Order received</p><h1 className="mt-3 text-5xl">Thank you, lovely.</h1><p className="mx-auto mt-5 max-w-md leading-7 text-plum/70">Your order is being prepared with care. A confirmation will be sent to the email address you shared at checkout.</p><Link href="/shop" className="btn-primary mt-8">Continue shopping</Link></main><Footer/></>}

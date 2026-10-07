@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base { * { @apply border-plum/10; } body { @apply bg-ivory text-plum font-sans; } h1,h2,h3 { @apply font-display; } }
+@layer components { .shell { @apply mx-auto max-w-7xl px-5 sm:px-8; } .eyebrow { @apply text-xs font-semibold uppercase tracking-[.2em] text-wine; } .btn { @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition duration-200; } .btn-primary { @apply btn bg-plum text-ivory hover:bg-wine; } .btn-secondary { @apply btn border border-plum/30 bg-ivory hover:bg-cream; }
+.article-body h2 { @apply font-display text-2xl text-plum mt-10 mb-4 scroll-mt-28 sm:text-[1.75rem]; }
+.article-body p { @apply mb-5 leading-7 text-plum/80; }
+.article-body em { @apply text-wine not-italic font-semibold; }
+.article-body .pull-quote { @apply my-8 border-l-4 border-wine bg-blush/20 px-6 py-5; }
+.article-body .pull-quote p { @apply mb-0 font-display text-xl italic leading-8 text-plum; }
+.article-body .closing-note { @apply mt-10 border-t border-plum/10 pt-6; }
+.article-body .closing-note p { @apply text-plum/80; }
+}

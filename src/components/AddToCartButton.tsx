@@ -1,0 +1,3 @@
+'use client';
+import { useState } from 'react';
+export function AddToCartButton({slug,price}:{slug:string;price:number}){const [added,setAdded]=useState(false);return <button onClick={()=>{const current=JSON.parse(localStorage.getItem('nettes-cart')||'[]') as {slug:string;quantity:number}[];const existing=current.find(i=>i.slug===slug);if(existing)existing.quantity+=1;else current.push({slug,quantity:1});localStorage.setItem('nettes-cart',JSON.stringify(current));setAdded(true)}} className="btn-primary mt-9 w-full sm:w-auto">{added?'Added to bag ✓':`Add to bag · $${price.toFixed(2)}`}</button>}
